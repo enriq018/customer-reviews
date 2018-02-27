@@ -1,0 +1,22 @@
+{
+  "name": "toast",
+  "version": "1.0.0",
+  "description": "customer reviews for steam toast",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NotAsBadAsItSteams/customerReviews.git"
+  },
+  "keywords": [
+    "customerReviews"
+  ],
+  "author": "javi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NotAsBadAsItSteams/customerReviews/issues"
+  },
+  "homepage": "https://github.com/NotAsBadAsItSteams/customerReviews#readme"
+}
