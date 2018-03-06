@@ -409,11 +409,8 @@ const mockGameData = [
   }
 ];
 
-/* True or false generator */
-const addEarlyAccess = () => Math.random() >= 0.5;
-
 /* Add early access property to mock data objects */
-mockGameData.forEach((el) => { el.earlyAccess = addEarlyAccess(); });
+mockGameData.forEach((el) => { el.earlyAccess = Math.random() >= 0.5; });
 
 const mockUserData = [];
 
