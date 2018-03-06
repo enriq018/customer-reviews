@@ -1,8 +1,8 @@
 const faker = require('faker');
 
-const getRandomInt = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+const getRandomInt = (low, high) => {
+  const min = Math.ceil(low);
+  const max = Math.floor(high);
   return Math.floor(Math.random() * (max - min)) + min;
 };
 
@@ -431,7 +431,7 @@ for (let i = 0; i < 500; i += 1) {
   const review = {};
   review.gameId = getRandomInt(1, 101);
   review.userId = getRandomInt(1, 21);
-  review.reviewPost = 'THIS IS JUST A PLACEHOLDER FOR NOW';
+  review.reviewPost = faker.lorem.paragraph();
   review.reviewTotalHelpful = getRandomInt(1, 400);
   review.hoursOnRecord = getRandomInt(1, 500);
   mockReviewData.push(review);
