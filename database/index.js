@@ -11,6 +11,4 @@ const config = {
 
 const db = pgp(config);
 
-module.exports = {
-  db: db,
-};
+module.exports = db;
