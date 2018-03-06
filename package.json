@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test-server": "mocha spec/server/app.spec.js",
+    "test-dbGen":"mocha spec/database/generator.spec.js",
     "clear-db": "psql -U toast -d customerreviews -a -f database/seed.sql",
     "pop-db": "node database/databaseGenerator.js",
     "server-dev": "nodemon server/index.js"
