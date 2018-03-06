@@ -1,6 +1,3 @@
--- to run in terminal:
--- psql -U toast -d customerreviews -a -f seed.sql
-
 DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
