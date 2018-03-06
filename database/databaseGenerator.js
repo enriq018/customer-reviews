@@ -13,7 +13,7 @@ const populateGamesTable = () => {
     /* remove ' from certain game titles */
     const title = mockData[i].title.split('').filter(el => el !== "'").join('');
     db.db
-      .none(`insert into games(gameName, earlyAccess) VALUES ('${title}', ${mockData[i].earlyAccess});`)
+      .any(`insert into games(gameName, earlyAccess) VALUES ('${title}', ${mockData[i].earlyAccess});`)
       .catch((error) => {
         console.log('ERROR:', error);
       });
