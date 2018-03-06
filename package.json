@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test-server": "mocha spec/server/app.spec.js",
+    "clear-db": "psql -U toast -d customerreviews -a -f database/seed.sql",
+    "pop-db": "node database/databaseGenerator.js",
     "server-dev": "nodemon server/index.js"
   },
   "repository": {
@@ -23,6 +25,7 @@
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
     "express": "^4.16.2",
+    "faker": "^4.1.0",
     "mocha": "^5.0.1",
     "nodemon": "^1.17.1",
     "pg-promise": "^8.1.1"

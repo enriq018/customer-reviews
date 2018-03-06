@@ -1,4 +1,12 @@
-module.exports = [
+const faker = require('faker');
+
+const getRandomInt = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+
+const mockGameData = [
   {
     title: "PLAYERUNKNOWN'S BATTLEGROUNDS",
     id: 1
@@ -400,3 +408,39 @@ module.exports = [
     id: 100
   }
 ];
+
+/* True or false generator */
+const addEarlyAccess = () => Math.random() >= 0.5;
+
+/* Add early access property to mock data objects */
+mockGameData.forEach((el) => { el.earlyAccess = addEarlyAccess(); });
+
+const mockUserData = [];
+
+for (let i = 0; i < 21; i += 1) {
+  const user = {};
+  user.userName = faker.name.findName();
+  user.userTotalProducts = getRandomInt(1, 50);
+  user.userTotalReviews = getRandomInt(1, 30);
+  mockUserData.push(user);
+}
+
+const mockReviewData = [];
+
+for (let i = 0; i < 500; i += 1) {
+  const review = {};
+  review.gameId = getRandomInt(1, 101);
+  review.userId = getRandomInt(1, 21);
+  review.reviewPost = 'THIS IS JUST A PLACEHOLDER FOR NOW';
+  review.reviewTotalHelpful = getRandomInt(1, 400);
+  review.hoursOnRecord = getRandomInt(1, 500);
+  mockReviewData.push(review);
+}
+
+const mockData = {
+  games: mockGameData,
+  users: mockUserData,
+  reviews: mockReviewData,
+};
+
+module.exports = mockData;
